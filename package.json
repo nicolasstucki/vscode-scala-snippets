@@ -1,0 +1,22 @@
+{
+    "name": "vscode-scala-snippets",
+    "displayName": "Scala Snippets",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "scala",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    },
+    "license": "TODO",
+    "publisher": "TODO"
+}

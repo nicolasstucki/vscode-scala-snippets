@@ -1,0 +1,109 @@
+{
+
+  "if then else": {
+    "scope": "scala",
+    "prefix": "if then else",
+    "body": "if ${1:???} then ${2:???}\nelse ${0:???}",
+    "description": "if/then/catch expression"
+  },
+    
+  "while do": {
+    "scope": "scala",
+    "prefix": "while do",
+    "body": "while ${1:???} do\n\t${0:???}",
+    "description": "while do loop"
+  },
+
+  "for do": {
+    "scope": "scala",
+    "prefix": "for do",
+    "body": "for ${1:element} <- ${2:elements} do\n\t${0:???}",
+    "description": "for do loop"
+  },
+
+  "for yield": {
+    "scope": "scala",
+    "prefix": "for yield",
+    "body": "for ${1:element} <- ${2:elements} yield\n\t${0:???}",
+    "description": "for yield mapping"
+  },
+
+  "try catch": {
+    "scope": "scala",
+    "prefix": "try catch",
+    "body": "try ${1:???}\ncatch {\n\tcase ${2:ex}: ${3:Exception} => ${0:???} \n}",
+    "description": "try/catch expression"
+  },
+
+  "macro": {
+    "scope": "scala",
+    "prefix": "macro:",
+    "body": "inline def ${1:methodName}(${2:arg}: ${3:ArgType}): ${4:ResType} =\n\t${ $1Expr('$2) }\n\nprivate def $1Expr($2Expr: Expr[$3])(using QuoteContext): Expr[$4] =\n\t${0:???}",
+    "description": "Macro definition"
+  },
+
+  "given as": {
+    "scope": "scala",
+    "prefix": "given:",
+    "body": "given ${1:name} as ${2:Type} ${3:= ${0:???}}",
+    "description": "given declaration"
+  },
+
+  "extension": {
+    "scope": "scala",
+    "prefix": "extension def",
+    "body": "extension (${1:self}: ${2:Self}):\n\tdef ${3:methodName} = ${0:???}",
+    "description": "Entension method declaration"
+  },
+
+  "def": {
+    "scope": "scala",
+    "prefix": "def:",
+    "body": "def ${1:methodName}(${2:}): ${3:Type} = ${0:???}",
+    "description": "Method declaration"
+  },
+
+  "val": {
+    "scope": "scala",
+    "prefix": "val:",
+    "body": "val ${1:valName}: ${2:Type} = ${0:???}",
+    "description": "Value declaration"
+  },
+  
+  "var": {
+    "scope": "scala",
+    "prefix": "var:",
+    "body": "var ${1:valName}: ${2:Type} = ${0:???}",
+    "description": "Variable declaration"
+  },
+
+  "enum": {
+    "scope": "scala",
+    "prefix": "enum:",
+    "body": "enum ${1:Color}:\n\tcase ${0:Red, case Green, case Blue}",
+    "description": "Snippet for if expression"
+  },
+
+  "enum-parameterizedparameterized": {
+    "scope": "scala",
+    "prefix": "enum:parameterized",
+    "body": "enum ${1:Color}(${2:val rgb: Int}):\n\tcase ${3:Red} extends $1(${4:0xFF0000})\n\t${5:case Green extends $1(0x00FF00)\n\tcase Blue extends $1(0x0000FF)}",
+    "description": "Snippet for if expression"
+  },
+
+  "class": {
+    "scope": "scala",
+    "prefix": "class:",
+    "body": "class ${1:className}[$2]($3)${4: extends A, B, C}:\n\t${0}\nend ${1:name}",
+    "description": "Class definition"
+  },
+
+  "main": {
+    "scope": "scala",
+    "prefix": "@main def",
+    "body": "@main def ${1:myApp}(${2:arg1: T1, arg2: T2, otherArgs: T*}) =\n\t${0:???}",
+    "description": "Main method definition"
+  },
+
+
+}

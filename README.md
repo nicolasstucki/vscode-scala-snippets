@@ -1,0 +1,3 @@
+# vscode-scala-snippets README
+
+
